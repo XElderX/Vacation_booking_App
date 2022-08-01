@@ -12,6 +12,7 @@ class Hotel extends Model
     public function booking(){
         return $this->belongTo(Booking_Order::class);
     }
+    protected $with = ['country'];
     public function country(){
         return $this->belongsTo(Country::class);
      }
